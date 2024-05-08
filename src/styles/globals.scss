@@ -1,0 +1,208 @@
+@import "bootstrap/scss/bootstrap";
+
+:root {
+  --primary: #f1f1f1;
+  --bgHover: #2caeff;
+}
+
+
+main,
+.flexCentered {
+  min-height: 90vh;
+}
+label {
+  color: #565656;
+}
+
+input::placeholder {
+  color: #999898 !important;
+}
+
+table tbody td,
+th {
+  vertical-align: middle;
+}
+
+.flexCentered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 32rem !important;
+  aspect-ratio: 4/3 !important;
+}
+
+.card-body {
+  background-size: cover !important;
+  background-position: center !important;
+  color: var(--primary) !important;
+  text-shadow: 1px 1px black;
+}
+.card-body-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0);
+  backdrop-filter: blur(4px);
+  opacity: 0.5;
+}
+
+.edit-btn:hover {
+  color: rgb(96, 128, 255);
+}
+
+.trash-btn:hover {
+  color: rgb(255, 100, 100);
+}
+
+.nav-link {
+  color: var(--primary) !important;
+  font-size: clamp(1rem, 1.5vw, 1.5rem) !important;
+  text-underline-offset: 0.3rem;
+}
+.nav-link:hover {
+  outline: 1px solid var(--primary);
+}
+
+.loginContainer,
+.footerContainer {
+  padding: 8rem 4rem !important;
+  width: 40rem !important;
+  background: rgb(238, 238, 238);
+  background: -moz-linear-gradient(
+    45deg,
+    rgb(238, 238, 238) 0%,
+    rgba(128, 128, 128, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgb(238, 238, 238) 0%,
+    rgba(128, 128, 128, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgb(238, 238, 238) 0%,
+    rgba(128, 128, 128, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#808080",GradientType=1);
+  -webkit-box-shadow: 2px 3px 4px 2px rgba(0, 0, 0, 0.46);
+  box-shadow: 2px 3px 4px 2px rgba(0, 0, 0, 0.46);
+}
+.loginForm {
+  min-width: 25rem;
+}
+
+.linkAuth a {
+  color: #3f3f3f;
+}
+.linkAuth a:hover {
+  color: #787878;
+}
+
+.hover-background-change {
+  cursor: pointer;
+}
+.hover-background-change:hover {
+  background-color: #7eceff;
+}
+.hover-background-change a {
+  transition: 0.2s ease;
+  color: #3f3f3f;
+}
+.hover-background-change a:hover {
+  transform: scale(1.2);
+}
+
+.course-creation-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.submitButtonCustom {
+  width: max-content;
+  padding: 0.5rem 4rem !important;
+  margin: 0 auto;
+}
+
+// * Gestione della modale
+.myModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 30%;
+  left: 38%;
+  padding: 2rem;
+  background-color: white;
+  width: 20rem;
+  aspect-ratio: 4/3;
+  z-index: 3;
+}
+.overlay {
+  position: fixed;
+  background-color: #565656;
+  opacity: 20%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.btn-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0.5rem;
+}
+.my-modal-footer {
+  display: flex;
+  justify-content: center;
+}
+.my-modal-title {
+  text-align: center;
+}
+.my-modal-body {
+  text-align: center;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px rgb(64, 64, 64);
+}
+
+
+@media (max-width: 992px) {
+  .nav-link {
+    text-align: center;
+  }
+  .nav-link:hover {
+    outline: none;
+    background-color: var(--bgHover);
+  }
+
+  .card {
+    width: 90vw !important;
+    aspect-ratio: 4/3 !important;
+  }
+  .loginContainer,
+  .footerContainer {
+    width: 100% !important;
+  }
+  .course-creation-container {
+    width: 100%;
+  }
+  .submitButtonCustom {
+    width: 100%;
+    padding: 0.5rem 2rem !important;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .loginForm {
+    min-width: 100%;
+  }
+}
